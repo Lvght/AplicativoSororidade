@@ -1,20 +1,16 @@
-# Trabalho 1 
+# aplicativo_sororidade
 
-## Grupo
-- Allan Mansilha Cidreira, RA: 760565
-- Amanda Peixoto Manso,    RA: 759847
-- Alisson Hayasi da Costa  RA: 726494
+A new Flutter project.
 
-## Compilação
+## Getting Started
 
+This project is a starting point for a Flutter application.
 
-## Execução
-Localizar os arquivo:
-	`Trab1-1.0-SNAPSHOT-jar-with-dependencies.jar`
-	E o arquivo de entrada com um código em linguagem LA 
+A few resources to get you started if this is your first Flutter project:
 
-Para executar o programa use o seguinte comando:\
-`java -jar caminho/Trab1-1.0-SNAPSHOT-jar-with-dependencies.jar caminho/arquivo_de_entrada.txt caminho/arquivo_de_saida.txt`
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-A saida será um arquivo localizado no diretório alvo com o nome fornecido
-# AplicativoSororidade
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
