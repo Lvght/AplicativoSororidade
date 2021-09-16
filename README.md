@@ -1,16 +1,8 @@
-# aplicativo_sororidade
+# Aplicativo Sororidade.
 
-A new Flutter project.
+---
 
-## Getting Started
+Um aplicativo para smartphones que permita a discussão em grupo de temas relacionados ao cotidiano feminino. Tal aplicativo visa possibilitar mulheres a exporem situações de violência, trocarem experiências, receberem apoio e interagirem em salas de bate-papo específicas.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
