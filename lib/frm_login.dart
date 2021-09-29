@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import "package:flutter/material.dart";
 
 class FrmLgn extends StatefulWidget {
@@ -12,9 +10,11 @@ class FrmLgn extends StatefulWidget {
 class _FrmLgnState extends State<FrmLgn> {
   String dirLogo = "assets/images/Logo_EntreElas.jpeg";
   List<String> users = ["Leila0102", "Joana00"];
+  bool? _chkBoxValue = false;
 
   @override
   Widget build(BuildContext context) {
+    final double _scrW = MediaQuery.of(context).size.width;
     return Container(
         color: Colors.white,
         child: Padding(
@@ -24,7 +24,6 @@ class _FrmLgnState extends State<FrmLgn> {
               Container(
                   height: 184,
                   width: 184,
-                  clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(dirLogo),
@@ -71,22 +70,20 @@ class _FrmLgnState extends State<FrmLgn> {
                                 borderRadius: BorderRadius.circular(20)),
                             hintText: "Senha"),
                       ))),
-              //Genero de identificação
+              //Genero de identificação.
               Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child: Material(
                       color: Colors.transparent,
                       child: TextField(
-                        
                         style: const TextStyle(
                             fontFamily: "Montserrat", fontSize: 15),
-                        
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20)),
-                            hintText: "Genero"),
+                            hintText: "Gênero"),
                       ))),
-              //Identificação
+              //Identificação.
               Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child: Material(
@@ -94,19 +91,54 @@ class _FrmLgnState extends State<FrmLgn> {
                       child: TextField(
                         style: const TextStyle(
                             fontFamily: "Montserrat", fontSize: 15),
-                        
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20)),
                             hintText: "Como deseja ser identificada?"),
                       ))),
-                      
-              Container(
-                top:10,
-                height: 180,
-                width: 180,
-                decoration: new BoxDecoration(color: Colors.red),
-              ),
+              Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Material(
+                      color: Colors.transparent,
+                      child: Row(children: [
+                        Transform.scale(
+                            scale: 1.5,
+                            child: Checkbox(
+                                value: _chkBoxValue,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _chkBoxValue = value;
+                                  });
+                                })),
+                        const Text(
+                          "Eu concordo com os dados acima registrados.\nE autorizo o uso para o processo de\nverificação de contas.",
+                          style:
+                              TextStyle(fontFamily: "Montserrat", fontSize: 16),
+                        )
+                      ]))),
+
+              // Botão de registrar.
+              Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Registrar",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: "Montserrat",
+                          fontSize: 15),
+                    ),
+                    style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color(0xFF83DBEE)),
+                        fixedSize: MaterialStateProperty.all<Size?>(
+                            Size.fromWidth(_scrW * 0.7))),
+                  ))
             ],
           ),
         ));
