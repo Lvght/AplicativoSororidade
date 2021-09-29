@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import "package:flutter/material.dart";
 
 class FrmLgn extends StatefulWidget {
@@ -68,7 +70,43 @@ class _FrmLgnState extends State<FrmLgn> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20)),
                             hintText: "Senha"),
-                      )))
+                      ))),
+              //Genero de identificação
+              Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Material(
+                      color: Colors.transparent,
+                      child: TextField(
+                        
+                        style: const TextStyle(
+                            fontFamily: "Montserrat", fontSize: 15),
+                        
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            hintText: "Genero"),
+                      ))),
+              //Identificação
+              Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Material(
+                      color: Colors.transparent,
+                      child: TextField(
+                        style: const TextStyle(
+                            fontFamily: "Montserrat", fontSize: 15),
+                        
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            hintText: "Como deseja ser identificada?"),
+                      ))),
+                      
+              Container(
+                top:10,
+                height: 180,
+                width: 180,
+                decoration: new BoxDecoration(color: Colors.red),
+              ),
             ],
           ),
         ));
