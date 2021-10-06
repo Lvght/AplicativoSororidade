@@ -22,7 +22,7 @@ class FrmTokenPage extends State<FrmToken> {
           children: <Widget>[
             SizedBox(
               height: 200,
-              child: Image.asset("lib/res/logo.png"),
+              child: Image.asset("assets/images/Logo_EntreElas.jpeg"),
             ),
             SizedBox(
               height: 20,
