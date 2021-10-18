@@ -1,3 +1,4 @@
+import 'package:aplicativo_sororidade/widgets/logo_container.dart';
 import "package:flutter/material.dart";
 
 class FrmLgn extends StatefulWidget {
@@ -8,7 +9,6 @@ class FrmLgn extends StatefulWidget {
 }
 
 class _FrmLgnState extends State<FrmLgn> {
-  String dirLogo = "assets/images/Logo_EntreElas.jpeg";
   List<String> users = ["Leila0102", "Joana00"];
   bool? _chkBoxValue = false;
 
@@ -19,21 +19,9 @@ class _FrmLgnState extends State<FrmLgn> {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 60, 20, 0),
-          child: Column(
+          child: ListView(
             children: [
-              Container(
-                  height: 184,
-                  width: 184,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(dirLogo),
-                        fit: BoxFit.fitHeight,
-                      ),
-                      borderRadius: BorderRadius.circular(92),
-                      border: Border.all(
-                          color: const Color(0xFF2AADE3),
-                          style: BorderStyle.solid,
-                          width: 3))),
+              logoContainer(),
               // Form de usuária com validação de usuária.
               Padding(
                   padding: const EdgeInsets.only(top: 20),
@@ -110,16 +98,18 @@ class _FrmLgnState extends State<FrmLgn> {
                                     _chkBoxValue = value;
                                   });
                                 })),
-                        const Text(
-                          "Eu concordo com os dados acima registrados.\nE autorizo o uso para o processo de\nverificação de contas.",
+                        const Expanded(
+                            child: Text(
+                          "Eu concordo com os dados acima registrados. E autorizo o uso para o processo de verificação de contas.",
                           style:
                               TextStyle(fontFamily: "Montserrat", fontSize: 16),
-                        )
+                          overflow: TextOverflow.clip,
+                        ))
                       ]))),
 
               // Botão de registrar.
               Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20, bottom: 80),
                   child: ElevatedButton(
                     onPressed: () {},
                     child: const Text(
