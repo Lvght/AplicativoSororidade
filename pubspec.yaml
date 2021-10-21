@@ -63,6 +63,13 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/images/Logo_EntreElas.jpeg
+    - assets/images/sexo.png
+    - assets/images/mercadodetrabalho.png
+    - assets/images/maternidade.png
+    - assets/images/machismo.png
+    - assets/images/saude.png
+
+
 
   fonts:
     - family: Montserrat
